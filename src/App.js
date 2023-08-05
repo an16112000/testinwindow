@@ -2,13 +2,15 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  fetch('https://snkrdunk.com/en/v1/brands/nike/sneakers?perPage=12&page=1')
-    .then(
-      res => res.json()
-    )
-    .then(
-      data => data
-    )
+  function handleClick() {
+    fetch('https://snkrdunk.com/en/v1/brands/nike/sneakers?perPage=12&page=1')
+      .then(
+        res => res.json()
+      )
+      .then(
+        data => console.log(data)
+      )
+  }
   return (
     <div className="App">
       <header className="App-header">
@@ -24,6 +26,7 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={handleClick}>Click here</button>
       </header>
     </div>
   );
