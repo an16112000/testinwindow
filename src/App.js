@@ -2,6 +2,13 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  fetch('https://snkrdunk.com/en/v1/brands/nike/sneakers?perPage=12&page=1')
+    .then(
+      res => res.json()
+    )
+    .then(
+      data => data
+    )
   return (
     <div className="App">
       <header className="App-header">
